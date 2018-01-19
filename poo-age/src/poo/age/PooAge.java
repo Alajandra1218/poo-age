@@ -18,6 +18,21 @@ public class PooAge {
         // TODO code application logic here
        
         System.out.println("Hola mundo");
+        
+        //Tenemos que generar los objetos de las clases anteriores
+        
+        Usuario x=new Usuario();
+        x.altura =1.61f;
+        x.peso=45f;
+        Imc algo=new Imc();
+        algo.u=x;
+        
+        //calculamos imc a traves de su objeto
+        
+        System.out.println(algo.calcular());
+  
+        
+        
     }
     
 }

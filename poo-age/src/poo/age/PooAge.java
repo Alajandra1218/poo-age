@@ -22,8 +22,8 @@ public class PooAge {
         //Tenemos que generar los objetos de las clases anteriores
         
         Usuario x=new Usuario();
-        x.altura =1.61f;
-        x.peso=45f;
+        x.setAltura(1.61f);
+        x.setPeso(45f);
         Imc algo=new Imc();
         algo.u=x;
         

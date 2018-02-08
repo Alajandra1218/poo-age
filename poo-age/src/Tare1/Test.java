@@ -14,4 +14,8 @@ public class Test {
      public Test (int x){
          System.out.println("entero");
      }
+     public Test (float x)
+     {
+           System.out.println("Flotante");
+     }
 }

@@ -18,4 +18,10 @@ public class Test {
      {
            System.out.println("Flotante");
      }
-}
+     public Test (byte x)
+     {
+           System.out.println("byte");
+     }
+    
+     }
+

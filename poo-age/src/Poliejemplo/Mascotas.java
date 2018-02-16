@@ -1,9 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
  */
 package Poliejemplo;
+
+import java.util.*;
 
 /**
  *
@@ -42,5 +40,23 @@ public class Mascotas {
                  s.servicioHacerRuido((ComportamientoAnimal)a);
                }
     
+         //vamos a generar un ArrayList y poner alli algunos animalitos
+   
+               
+               ArrayList<Animal> animalitos=new ArrayList<>();
+    animalitos.add(new Pollo());
+    animalitos.add(new Ratón ());
+    animalitos.add(new Perro ());
+    animalitos.add(new Pollo());
+     animalitos.add(new Gato ());
+     for(Animal a : animalitos)
+               {
+                 s.servicioHacerRuido((ComportamientoAnimal)a);
+               }
+    
+    animalitos.get(0).setEdad(1);
+        System.out.println(animalitos.get(0).getEdad());
     }
+
+
 }

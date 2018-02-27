@@ -1,5 +1,8 @@
 package poo.age;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -97,20 +100,31 @@ public class Ventanita extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        //pedimos el valor al texto peso y altura
-        Float peso=Float.parseFloat(textoPeso.getText());
-        Float altura=Float.parseFloat(textoAltura.getText());
-        //creamos nuestra entidad
-        Usuario u=new Usuario();
-        u.setPeso(peso);
-        u.setAltura(altura);
-        //generaos el modelo IMC
-        Imc x=new Imc();
-        x.u=u;
-        
-        //en el IMC que se llama x invocamos el  metodo calcular
-        etiquetaResultado.setText(x.calcular());
+        try {
+            // TODO add your handling code here:
+            //pedimos el valor al texto peso y altura
+            
+            Float peso=Float.parseFloat(textoPeso.getText());
+            Float altura=Float.parseFloat(textoAltura.getText());
+            //creamos nuestra entidad
+            Usuario u=new Usuario();
+            // los validamos
+            ValidarCanidades.validarValorNegativo(altura) ;
+            ValidarCanidades.validarValorNegativo(peso);
+            
+            
+            
+            u.setPeso(peso);
+            u.setAltura(altura);
+            //generaos el modelo IMC
+            Imc x=new Imc();
+            x.u=u;
+            
+            //en el IMC que se llama x invocamos el  metodo calcular
+            etiquetaResultado.setText(x.calcular());
+        } catch (NumeroNegativoException ex) {
+                   etiquetaResultado.setText(ex.getMessage());
+        }
         
     }//GEN-LAST:event_jButton1ActionPerformed
 

@@ -7,7 +7,6 @@ package serializacion;
 
 import java.io.*;
 
-
 public class PersistenciaUsuario {
 
     Usuario u;

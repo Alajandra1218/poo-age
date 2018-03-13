@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package serializacion;
-
 import java.io.*;
 public class Usuario implements Serializable{
     private int edad;
